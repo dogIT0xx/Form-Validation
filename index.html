@@ -47,6 +47,19 @@
         </form>
 
     </div>
+
+    <script src="./main.js"></script>
+    <script>
+        Validator({ 
+            form: '#form-1',
+            message: '.form-message',
+            rules: [
+                Validator.isRequired('#fullname'),
+                Validator.isEmail('#email'),
+                Validator.minLength('#password', 6),
+            ]
+        })
+    </script>
 </body>
 
 </html>
